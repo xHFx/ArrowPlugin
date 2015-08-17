@@ -15,15 +15,16 @@ class main extends PluginBase implements Listener{
                 $this->getServer()->getPluginManager()->registerEvents($this, $this);
         }
        
-        public function onDeath(PlayerDeathEvent $e){
+        public function onDamage(EntityDamageByEntityEvent $ev){
                /***
                 *    http://docs.pocketmine.net/d6/d5c/_entity_damage_by_entity_event_8php_source.html
                 *    public function getDamager(){
                 *    return $this->damager;
                 */ 
                 
-                $entity = $e->getDamager();
-                if($entity instanceof Arrow) {
+                $e = $ev->getEntity();
+                
+                 if($e instanceof Player && ($ev->getFinalDamage()- $e->getHealth() <= 0)) {
                         $e->getPlayer()->getInventory()->addItem(Item::get(262, 0, 1));
                 }
         }
