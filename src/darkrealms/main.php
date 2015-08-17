@@ -16,6 +16,12 @@ class Main extends PluginBase implements Listener{
         }
        
         public function onDeath(PlayerDeathEvent $e){
+               /***
+                *    http://docs.pocketmine.net/d6/d5c/_entity_damage_by_entity_event_8php_source.html
+                *    public function getDamager(){
+                *    return $this->damager;
+                */ 
+                
                 $entity = $e->getKiller();
                 if($entity instanceof Arrow) {
                         $e->getPlayer()->getInventory()->addItem(Item::get(262, 0, 1));
