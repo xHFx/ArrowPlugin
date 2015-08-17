@@ -22,7 +22,7 @@ class main extends PluginBase implements Listener{
                 *    return $this->damager;
                 */ 
                 
-                $entity = $e->getKiller();
+                $entity = $e->getDamager();
                 if($entity instanceof Arrow) {
                         $e->getPlayer()->getInventory()->addItem(Item::get(262, 0, 1));
                 }
