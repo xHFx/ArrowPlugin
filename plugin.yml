@@ -1,0 +1,6 @@
+name: 1inTheQuiver
+main: darkrealms\main
+version: "1.0.0"
+api: [1.0.0]
+description: Kicks a player upon death.
+author: DarkRealms
