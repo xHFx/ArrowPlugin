@@ -2,6 +2,7 @@
 
 namespace darkrealms;
 
+use pocketmine\event\entity\EntityByDamageByEntityEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\Plugin;
 use pocketmine\event\Listener;
