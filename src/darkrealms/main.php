@@ -24,7 +24,7 @@ class main extends PluginBase implements Listener{
                 
                 $e = $ev->getEntity();
                 
-                 if($e instanceof Player && ($ev->getFinalDamage()- $e->getHealth() <= 0)) {
+                 if($e instanceof Player && ($ev->getFinalDamage() - $e->getHealth() <= 0)) {
                         $e->getPlayer()->getInventory()->addItem(Item::get(262, 0, 1));
                 }
         }
