@@ -3,6 +3,8 @@
 namespace darkrealms;
 
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\Plugin;
 use pocketmine\event\Listener;
@@ -16,7 +18,7 @@ class main extends PluginBase implements Listener{
                 $this->getServer()->getPluginManager()->registerEvents($this, $this);
         }
        
-        public function onDamage(EntityDamageByEntityEvent $ev){
+        public function onDamage(EntityDamageEvent $ev){
                /***
                 *    http://docs.pocketmine.net/d6/d5c/_entity_damage_by_entity_event_8php_source.html
                 *    public function getDamager(){
