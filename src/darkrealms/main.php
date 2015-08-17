@@ -8,7 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\item\Item;
 
-class Main extends PluginBase implements Listener{
+class main extends PluginBase implements Listener{
        
         public function onEnable(){
                 $this->getLogger()->info("Arrow plugin loaded");
